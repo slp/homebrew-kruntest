@@ -5,6 +5,12 @@ class Buildah < Formula
   sha256 "4e406a0cc6a90066cd471deea252fe8862dbd7fa9cb72b274617673d6159a32b"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/slp/homebrew-kruntest/releases/download/buildah-1.28.0"
+    sha256 cellar: :any, arm64_tahoe:   "b28b2c1a05f9647fcd2a867903830cac50f93a2c44f6a1293d531b61b400abe9"
+    sha256 cellar: :any, arm64_sequoia: "2377dd3da0c49afa418b1043ea7e1864b96a6ba36d45409a6818d253edab730c"
+  end
+
   depends_on "go" => :build
   depends_on "go-md2man" => :build
   depends_on "pkgconf" => :build
